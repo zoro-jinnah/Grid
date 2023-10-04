@@ -10,12 +10,33 @@
 display: contents; 
 
 }
+/* hamburger */
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    display: none;
+
+}
+
+.hamburger{
+    display: none;
+    font-family: var(--secondary-font-family);
+}
+
+#check{
+    display: none;
+}
+
+
+
 #btnnn{
     border-radius: 16px;
 }
 #btns{
     border-radius: 16px;
 }
+
 .navbarr img{
     width: 71px;
     height: 49px;
@@ -467,6 +488,56 @@ footer img {
     nav ul li {
         padding: 18px;
     }
+    #nav1{
+        display: none;
+    }
+    .checkbtn{
+        display: block;
+        margin: 12px 25px;
+    }
+    }
+
+    .hamburger{
+        display: block;
+        flex-direction: column;
+        position: fixed;
+        width: 50%;
+        height: 100vh;
+        background-color: rgb(58, 49, 49);
+        top: 67px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;      
+        z-index: 1;  
+    }
+
+    .hamburger ul{
+        
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+    }
+
+    .hamburger ul li a{
+        padding: 5px;
+        margin: 10px;
+        font-size: 14px;
+        color: white;
+        text-decoration: none;
+    }
+
+    .hamburger ul li a:hover{
+        background-color: rgb(198, 198, 38);
+        color: black;
+        border-radius: 20px;
+        box-shadow: 0 0 10px rgb(198, 198, 38), 0 0 30px rgb(198, 198, 38), 0 0 60px rgb(198, 198, 38);
+        
+    }
+
+    #check:checked ~ .hamburger{
+        left: 0;
+    }
+
 }
 @media screen and (max-width:850px) {
     nav ul li {
